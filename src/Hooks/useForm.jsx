@@ -11,8 +11,13 @@ const types = {
   password: {
     // eslint-disable-next-line no-useless-escape
     regex: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/i,
-    message: 'A senha deve conter no mínimo uma letra minúscula, uma letra maiúscula, um dígito e um caractere especial.'
-  }
+    message:
+      'A senha deve conter no mínimo uma letra minúscula, uma letra maiúscula, um dígito e um caractere especial.',
+  },
+  number: {
+    regex: /^\d+$/,
+    message: "Utilize numeros apenas"
+  },
 };
 
 const useForm = (type) => {
@@ -32,7 +37,7 @@ const useForm = (type) => {
     }
   }
   function onChange({ target }) {
-    if(error)validate(target.value)
+    if (error) validate(target.value);
     setValue(target.value);
   }
   return {
