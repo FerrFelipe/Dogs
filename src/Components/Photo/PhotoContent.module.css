@@ -27,12 +27,8 @@
   grid-row: 1/4;
 }
 
-.comments{
-  padding: 0 2rem;
-}
-
 @media(max-width: 64rem){
-  .photo{
+  .unique.photo{
     height: auto;
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
@@ -85,4 +81,19 @@
   width: 3px;
   background: #333;
   margin-top: 5px;
+}
+
+.photoSingle.photo{
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
+.photoSingle .details{
+  padding: 1rem 0 0 0;
+}
+
+.photoSingle .img{
+  grid-row: 1;
+  border-radius: .4rem;
+  object-fit: cover;
 }
