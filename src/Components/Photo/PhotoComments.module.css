@@ -10,3 +10,8 @@
 .photoSingle.comments{
   padding: 0px;
 }
+@media(max-width: 64rem){
+  .comments{
+    height: 100px;
+  }
+}
